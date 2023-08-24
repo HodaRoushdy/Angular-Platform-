@@ -1,0 +1,79 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">{{'idNumber'|| translate}}</th>
+      <th scope="col">{{'fullName' || translate}}</th>
+      <th scope="col">{{'email' || translate}}</th>
+      <th scope="col">{{'workingDays'|| translate}}</th>
+      <th scope="col">{{'userInterface'|| translate}}</th>
+      <th scope="col"><img style="background-color: #0047b3;" src="../../assets/setting-2 (1).png"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>
+        <ng-template #tipContent>{{name}}</ng-template>
+        <p [ngbTooltip]="tipContent">new presumptive...</p>
+      </td>
+      <td>Example@company.com</td>
+
+      <td> <input name="workingDays" type="date" id="date" min="2023-01-01"></td>
+
+      <td><div style="display: flex;justify-content: space-between;">
+        <img class="img-fluid" src="../../assets/calendar icone.svg">
+        <span>user iterface.png</span>
+        <a href="#"><img  src="../../assets/dots.svg"></a>
+      </div>
+      <td>control of table</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><ng-template #tipContent>{{name}}</ng-template>
+        <p [ngbTooltip]="tipContent">new presumptive...</p></td>
+      <td>Example@company.com</td>
+      <td><input name="workingDays" type="date" id="date" min="2023-01-01" ></td>
+      <td><div style="display: flex;justify-content: space-between;">
+        <img class="img-fluid" src="../../assets/imageflour.png">
+        <span>user iterface.png</span>
+        <a href="#"><img src="../../assets/dots.svg"></a>
+      </div></td>
+      <td>control of table</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><ng-template #tipContent>{{name}}</ng-template>
+        <p [ngbTooltip]="tipContent">new presumptive...</p></td>
+      <td>Example@company.com</td>
+      <td><input name="workingDays" type="date" id="date" min="2023-01-01"></td>
+      <td><div style="display: flex;justify-content: space-between;">
+        <img class="img-fluid" src="../../assets/calendar icone.svg">
+        <span>user iterface.png</span>
+        <a href="#"><img src="../../assets/dots.svg"></a>
+      </div></td>
+      <td>control of table</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><ng-template #tipContent>{{name}}</ng-template>
+        <p [ngbTooltip]="tipContent">new presumptive...</p></td>
+      <td>Example@company.com</td>
+      <td><input name="workingDays" type="date" id="date" min="2023-01-01"></td>
+      <td><div style="display: flex;justify-content: space-between;">
+        <img class="img-fluid" src="../../assets/imageflour.png">
+        <span>user iterface.png</span>
+        <a href="#"><img src="../../assets/dots.svg"></a>
+      </div></td>
+      <td>control of table</td>
+    </tr>
+  </tbody>
+</table>
+
+<ngb-pagination class="bg-info"
+	[collectionSize]="120"
+	[(page)]="page"
+	[maxSize]="5"
+	[rotate]="true"
+	[boundaryLinks]="true"
+></ngb-pagination>
+

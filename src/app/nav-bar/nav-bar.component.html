@@ -1,0 +1,187 @@
+<!-- <div class="app" style="display: flex; height: 100vh; overflow:scroll initial">
+  <CDBSidebar textColor="#ffffff" backgroundColor="#333333">
+      <CDBSidebarHeader [prefix]="icon">
+          <ng-template #icon>
+              <i class="fa fa-bars fa-large"></i>
+          </ng-template>
+          Logoipsum
+      </CDBSidebarHeader>
+
+      <CDBSidebarContent>
+          <CDBSidebarMenu class="sidebar-content">
+              <CDBSidebarMenuItem link='/' icon="columns" style="justify-content: center;text-align:start">
+                  الرئيسيه
+              </CDBSidebarMenuItem>
+              <CDBSidebarMenuItem link='/tables' icon="table" style="justify-content: center;text-align:start">
+                  منيو رقم 1
+              </CDBSidebarMenuItem>
+              <CDBSidebarMenuItem link='/profile' icon="user" style="justify-content: center;text-align:start">
+                  منيو رقم 1
+              </CDBSidebarMenuItem>
+          </CDBSidebarMenu>
+      </CDBSidebarContent>
+      <div class="mt-auto">
+
+          <CDBSidebarFooter style="text-align: center; margin-top: auto;">
+              <div class="sidebar-btn-wrapper" style="padding: 20px 5px">
+                  Sidebar Footer
+              </div>
+          </CDBSidebarFooter>
+      </div>
+  </CDBSidebar>
+</div> -->
+
+<!--
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand">
+      {{'title' | translate }}
+    </a>
+    <span class="form-inline">
+      <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+        <option *ngFor="let language of translate.getLangs()" [value]="language"
+          [selected]="language === translate.currentLang">
+          {{ language }}
+        </option>
+      </select>
+    </span>
+  </div>
+ </nav>
+ <div class="container">
+  <form>
+    <div class="form-group">
+      <label>{{'firstMenu' | translate}}</label>
+      <input type="text" class="form-control">
+      <small class="text-danger">{{'secondMenu' | translate}}</small>
+    </div>
+    <div class="form-group">
+      <label>{{'email' | translate}}</label>
+      <input type="email" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>{{'idNumber' | translate}}</label>
+      <input class="form-control">
+    </div>
+    <div class="form-group">
+      <label>{{'fullName' | translate}}</label>
+      <input class="form-control">
+    </div>
+    <div class="form-group">
+      <label>{{'addNew' | translate}}</label>
+      <textarea rows="3" class="form-control"></textarea>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input">
+      <label class="form-check-label">{{'workingDays' | translate}}</label>
+    </div>
+    <button type="submit" class="btn btn-block btn-danger">{{'Submit' | translate}}</button>
+  </form>
+</div> -->
+
+
+<div class="h-100 mx-4">
+  <div class="brand pt-3" style="display: block">
+    <img src="../../assets/brand.png">
+  </div>
+
+    <div class="section1 pt-5">
+      <div>
+        <img src="../../assets/home.svg">
+        <span style="line-height: 50px">{{'title' || translate}}</span>
+      </div>
+
+      <div class="dropdown my-3" >
+        <div class="d-flex">
+          <div>
+            <img src="../../assets/home.svg" class="me-2">
+          </div>
+          <div class="d-flex" style="justify-content: space-between">
+            <p class="dropbtn">{{'firstMenu' || translate}}</p>
+            <div>
+              <img src="../../assets/Vector.svg">
+            </div>
+          </div>
+        </div>
+          <div class="dropdown-content">
+            <a href="#">{{'smallMenu'|| translate}}</a>
+            <a href="#">{{'smallMenu'|| translate}}</a>
+            <a href="#">{{'smallMenu'|| translate}}</a>
+          </div>
+      </div>
+
+      <div class="dropdown">
+        <div style="display: flex;">
+          <div>
+            <img src="../../assets/Rectangle 226.svg" class="w-50" style="position: relative; rotate: 180deg;">
+            <img src="../../assets/home.svg" class="d-flex" style="position: absolute;top: 10%; width: 20px" >
+          </div>
+          <div class="d-flex">
+            <p class="dropbtn">{{'firstMenu' || translate}}</p>
+            <div>
+              <img src="../../assets/Vector (1).svg">
+              </div>
+          </div>
+        </div>
+          <div class="dropdown-content">
+            <a href="#">{{'smallMenu'|| translate}}</a>
+            <a href="#">{{'smallMenu'|| translate}}</a>
+            <a href="#">{{'smallMenu'|| translate}}</a>
+          </div>
+
+      </div>
+      <div class="dropdown my-3" >
+        <div class="d-flex">
+          <div>
+            <img src="../../assets/home.svg" class="me-2">
+          </div>
+          <div class="d-flex" style="justify-content: space-between">
+            <p class="dropbtn">{{'firstMenu' || translate}}</p>
+            <div>
+              <img src="../../assets/Vector.svg">
+            </div>
+          </div>
+        </div>
+          <div class="dropdown-content">
+            <a href="#">{{'smallMenu'|| translate}}</a>
+            <a href="#">{{'smallMenu'|| translate}}</a>
+            <a href="#">{{'smallMenu'|| translate}}</a>
+          </div>
+      </div>
+      <div class="dropdown my-3" >
+        <div class="d-flex">
+          <div>
+            <img src="../../assets/home.svg" class="me-2">
+          </div>
+          <div class="d-flex" style="justify-content: space-between">
+            <p class="dropbtn">{{'firstMenu' || translate}}</p>
+            <div>
+              <img src="../../assets/Vector.svg">
+            </div>
+          </div>
+        </div>
+          <div class="dropdown-content">
+            <a href="#">{{'smallMenu'|| translate}}</a>
+            <a href="#">{{'smallMenu'|| translate}}</a>
+            <a href="#">{{'smallMenu'|| translate}}</a>
+          </div>
+      </div>
+
+    </div>
+
+    <div class="section2 pt-5">
+      <div class="pb-5">
+        <span >{{'account'|| translate}}</span>
+      </div>
+      <div style="align-content: center;">
+        <div class="d-flex">
+          <img src="../../assets/info-circle.svg" class="pe-2">
+          <div class="forA"><a href="#">{{'help'|| translate}}</a></div>
+        </div>
+        <div class="d-flex mt-3">
+          <img src="../../assets/setting-2.png" class="pe-2">
+          <div class="forA"><a href="#">{{'setting'|| translate}}</a></div>
+        </div>
+      </div>
+  </div>
+
+</div>

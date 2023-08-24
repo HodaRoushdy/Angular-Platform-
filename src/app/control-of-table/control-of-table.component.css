@@ -1,0 +1,26 @@
+#date{
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+
+}
+.table img:hover
+{
+background-color:#b3d1ff;
+}
+
+td{
+  font-family:Poppins ;
+  font-weight: 400;
+  size: 9.81px;
+  line-height: 14.71px;
+}th{
+  font-family: 'Neo Sans Arabic';
+  font-weight: 400;
+  size:10.38px ;
+  line-height:16.15px ;
+  color: #5A5A67;
+}
