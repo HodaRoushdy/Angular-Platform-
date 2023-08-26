@@ -4,6 +4,8 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { NgIf } from '@angular/common';
 import { Component ,OnInit } from '@angular/core';
 import { SidebarModule } from 'ng-cdbangular';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+
 /** @title Basic sidenav */
 
 
@@ -16,7 +18,7 @@ import { SidebarModule } from 'ng-cdbangular';
   styleUrls: ['./nav-bar.component.css',
 ],
   standalone: true,
-  imports: [NgIf, SidebarModule , TranslateModule],
+  imports: [NgIf, SidebarModule , TranslateModule,NgbDropdownModule],
 })
 export class NavBarComponent {
   constructor(

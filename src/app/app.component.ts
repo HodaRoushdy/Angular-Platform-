@@ -1,23 +1,25 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
-
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   constructor(
-    public translate: TranslateService
-  ) {
-
-    translate.addLangs(['en', 'ar']);
-    translate.use('ar');
-  }
+    private translateService: TranslateService,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
   title = 'my-task';
-  switchLang(lang: string) {
-    this.translate.use(lang);
+
+  changeLangage(lang: string) {
+    let htmlTag = this.document.getElementsByTagName(
+      'html'
+    )[0] as HTMLHtmlElement;
+    htmlTag.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    this.translateService.setDefaultLang(lang);
+    this.translateService.use(lang);
   }
 }
