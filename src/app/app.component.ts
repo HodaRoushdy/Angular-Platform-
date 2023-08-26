@@ -11,7 +11,9 @@ export class AppComponent {
   constructor(
     private translateService: TranslateService,
     @Inject(DOCUMENT) private document: Document
-  ) {}
+  ) {
+    this.changeLangage('ar');
+  }
   title = 'my-task';
 
   changeLangage(lang: string) {
