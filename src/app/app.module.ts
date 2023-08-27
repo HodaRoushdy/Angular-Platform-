@@ -19,7 +19,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateService } from '@ngx-translate/core';
 import { CardComponent } from './card/card.component';
 import { LefSideComponent } from './lef-side/lef-side.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import {MatIconModule} from '@angular/material/icon';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {CommonModule} from '@angular/common';
+import { A11yModule } from '@angular/cdk/a11y';
+import { CdkTableModule } from '@angular/cdk/table';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -37,8 +46,23 @@ import { LefSideComponent } from './lef-side/lef-side.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    BrowserModule,
     CardComponent,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule,
+    MatIconModule,
+    DragDropModule,
+    CommonModule,
+    A11yModule,
+    CdkTableModule,
+    CdkTableModule,
+    // MatAutocompleteModule,
+    // MatBadgeModule,
+    // MatBottomSheetModule,
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     SearchAndFilterComponent,
     RouterModule.forRoot([]),
     HttpClientModule,

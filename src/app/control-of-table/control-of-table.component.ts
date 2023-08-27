@@ -6,6 +6,9 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SidebarModule } from 'ng-cdbangular';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+import {MatTableDataSource} from '@angular/material/table';
+
 
 interface PageEvent {
   first: number;
@@ -77,4 +80,7 @@ export class ControlOfTableComponent {
     this.first = event.first;
     this.rows = event.rows;
   }
+
 }
+
+
