@@ -39,6 +39,10 @@ line-height: 13px;
 letter-spacing: 0em;
 text-align: left;
 color: #1C1C28;
-
-
+}
+.commentArr a{
+  background-color: #ffff;
+}
+.commentArr a:hover{
+  background-color: pink;
 }
