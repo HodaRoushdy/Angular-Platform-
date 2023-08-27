@@ -1,16 +1,78 @@
-<div class="comment m-3">
+<div class="comment ">
   <div style="justify-content:center; align-items: center;gap: 10px;" class="d-flex">
-    <div>
-      <p>{{'scheduleDates' | translate}}</p>
-    </div>
+    <div style="display:flex;align-items: center; text-align: center; gap: 10px;">
+      <div class="pt-3" style="display: flex; text-align: center; height: 100%;align-items: center;">
+        <p>{{'scheduleDates' | translate}}</p>
+      </div>
     <div class="d-flex" style="justify-content:center; align-items: center;gap: 10px;">
-      <div style="transform:rotate(180deg);"><img src="../../assets/icon.png"></div>
-      <div><img src="../../assets/icon.png"></div>
+      <div><img src="../../assets/right icon.svg"></div>
+      <div><img src="../../assets/left icon.svg"></div>
     </div>
+  </div>
+
     <a href="#"><img src="../../assets/calendar-2.svg">
       <input name="workingDays" type="date" id="date" min="2023-01-01"></a>
-
   </div>
+
+  <hr class="dashed-line">
+
+<div class="weekDays d-flex col-sm-12" style="gap: 12px;">
+
+<div class="day">
+  <span>{{'sat'| translate}}</span>
+  <h5>24</h5>
+  <div class="d-flex" style="justify-content: center;">
+    <img src="../../assets/red dot.svg">
+  </div>
+</div>
+<div class="day p-1" style="background-image: url('../../assets/yellow\ rec.svg'); justify-content: center;">
+  <span>{{'sun'| translate}}</span>
+  <div style="position: relative; align-items: center ;justify-content: center;">
+    <img src="../../assets/black circle.svg">
+    <h5 style=" position: absolute; top: 2px;right:3px ; text-align: center; justify-self: center;color: white;">25</h5>
+  </div>
+  <div class="d-flex" style="justify-content: center;">
+    <img src="../../assets/two dots.svg">
+  </div>
+</div>
+<div class="day">
+  <span>{{'mon'| translate}}</span>
+  <h5>26</h5>
+</div>
+<div class="day">
+  <span>{{'tues'| translate}}</span>
+  <h5>27</h5>
+  <div class="d-flex" style="justify-content: center;">
+    <img src="../../assets/green dot.svg">
+    <img src="../../assets/orange dot.svg">
+  </div>
+
+</div>
+<div class="day">
+  <span>{{'wed'| translate}}</span>
+  <h5>28</h5>
+  <div class="d-flex" style="justify-content: center;">
+    <img src="../../assets/green dot.svg">
+    <img src="../../assets/orange dot.svg">
+    <img src="../../assets/purple dot.svg">
+  </div>
+</div>
+<div class="day">
+  <span>{{'thur'| translate}}</span>
+  <h5>29</h5>
+</div>
+<div class="day">
+  <span>{{'fri'| translate}}</span>
+  <h5>30</h5>
+  <div class="d-flex" style="justify-content: center;">
+    <img src="../../assets/green dot.svg">
+  </div>
+</div>
+
+</div>
+
+
+
 
 <div class="commentCard1 p-3 m-3" style="border-radius: 20px;">
   <h5>{{'comment'|translate}}</h5>
@@ -20,7 +82,7 @@
   </div>
   <div style="display:flex;justify-content:space-between">
     <img src="../../assets/Image-35.png">
-    <img style="rotate: 180deg;" src="../../assets/arr.svg">
+    <img src="../../assets/arr.svg">
   </div>
 
 </div>
@@ -35,9 +97,9 @@
 
     <div class="d-flex" style="align-items: center;gap: 5px;">
       <img src="../../assets/girl.png">
-      <p class="pt-2">mira mohsen</p>
+      <p class="pt-2">{{'namePerson1'|translate}}</p>
     </div>
-    <img style="rotate: 180deg;" src="../../assets/arr.svg">
+    <img src="../../assets/arr.svg">
   </div>
 
 
@@ -52,9 +114,9 @@
   <div style="display:flex;justify-content:space-between">
     <div class="d-flex" style="align-items: center;gap: 5px;">
       <img class="img-fluid man" src="../../assets/man.png">
-      <p class="pt-2">Mahmoud Elgharib</p>
+      <p class="pt-2">{{'namePerson2'|translate}}</p>
     </div>
-    <img style="rotate: 180deg;" src="../../assets/arr.svg">
+    <img src="../../assets/arr.svg">
   </div>
 
 
@@ -70,9 +132,9 @@
   <div style="display:flex;justify-content:space-between">
     <div class="d-flex " style="align-items: center;gap: 5px;">
       <img src="../../assets/man2.png">
-      <p class="pt-2">Karem Abdulaziz</p>
+      <p class="pt-2">{{'namePerson3'|translate}}</p>
     </div>
-    <img style="rotate: 180deg;" src="../../assets/arr.svg">
+    <img src="../../assets/arr.svg">
   </div>
 
 
@@ -90,7 +152,7 @@
       <img src="../../assets/Image-35.png">
       <p class="pt-2"></p>
     </div>
-    <img style="rotate: 180deg;" src="../../assets/arr.svg">
+    <img src="../../assets/arr.svg">
   </div>
 
 

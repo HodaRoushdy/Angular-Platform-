@@ -23,5 +23,24 @@
   "scheduleControl":"التحكم في الجدول",
   "scheduleDates":"تقوييم المواعيد",
   "comment":"هناك حقيقه مثبته منذ زمن طويل وهي ان المحتوى",
-  "device":"جهاز"
+  "device":"جهاز",
+  "newPresumptive":"اسم افتراضي جديد",
+  "sat":"السبت",
+  "sun":"الاحد",
+  "mon":"الاثنين",
+  "tues":"الثلاثاء",
+  "wed":"الاربعاء",
+  "thur":"الخميس",
+  "fri":"الجمعه",
+  "satabb":"س",
+  "sunabb":"ح",
+  "monabb":"ن",
+  "tuesabb":"ث",
+  "wedabb":"ر",
+  "thurabb":"خ",
+  "friabb":"ج",
+  "namePerson1":"ميرا محسن",
+  "namePerson2":"محمود الغريب",
+  "namePerson3":"كريم عبد العزيز"
+
 }

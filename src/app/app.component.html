@@ -1,22 +1,21 @@
 <!-- <div style="direction: rtl;"> -->
   <button (click)="changeLangage('ar')">Arabic</button>
   <button (click)="changeLangage('en')">English</button>
-  <div class="d-flex">
-  <div class="col-md-2">
-    <app-nav-bar></app-nav-bar>
+
+<div class="row mt-3">
+
+  <div class="col-lg-2 col-md-3 col-xl-2 col-sm-12">
+      <app-nav-bar></app-nav-bar>
   </div>
-<div class="col-md-7" style="background-color: #E0E3E9;" >
+
+<div class="col-lg-7 col-md-9 col-xl-7 col-sm-12" style="background-color: #E7E7E7;" >
   <app-card></app-card>
   <app-search-and-filter></app-search-and-filter>
   <app-control-of-table></app-control-of-table>
 </div>
-<div>
-  <app-lef-side></app-lef-side>
+
+<div class="col-lg-3 col-md-12 col-xl-3 col-sm-12">
+  <app-lef-side ></app-lef-side>
 </div>
 
-
 </div>
-
-
-
-<!-- </div> -->

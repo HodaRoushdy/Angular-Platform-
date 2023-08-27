@@ -4,13 +4,14 @@ import { RouterModule } from '@angular/router';
 import { DropdownModule } from 'primeng/dropdown';
 import { Component ,OnInit } from '@angular/core';
 import { SidebarModule } from 'ng-cdbangular';
-
+import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-lef-side',
   templateUrl: './lef-side.component.html',
   styleUrls: ['./lef-side.component.css'],
   standalone:true,
-  imports: [NgIf , TranslateModule , SidebarModule],
+  imports: [NgIf , TranslateModule , SidebarModule,NgbCarouselModule],
+  providers: [NgbCarouselConfig],
 
 })
 export class LefSideComponent {

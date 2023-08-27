@@ -1,17 +1,15 @@
-import { RouterModule } from '@angular/router';
-import { DropdownModule } from 'primeng/dropdown';
-import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { NgIf } from '@angular/common';
-import { Component ,OnInit } from '@angular/core';
-import { SidebarModule } from 'ng-cdbangular';
+import { DOCUMENT, NgIf } from '@angular/common';
+import { Component, Inject } from '@angular/core';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { SidebarModule } from 'ng-cdbangular';
 
 /** @title Basic sidenav */
 
 
 
 
-
+// {{row.fullName.length > 20 ? row.fullName.slice(0,20) +'...' : row.fullName}}
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -22,6 +20,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NavBarComponent {
   constructor(
+    @Inject(DOCUMENT) private document: Document,
     public translate: TranslateService
   ) {
     translate.addLangs(['en','ar']);
@@ -31,7 +30,13 @@ export class NavBarComponent {
   switchLang(lang: string) {
     this.translate.use(lang);
   }
+  htmlTag = this.document.getElementsByTagName(
+    'html'
+  )[0] as HTMLHtmlElement;
+
+  check=  this.htmlTag.dir =='rtl' ? 'right' : 'left'
 }
+
 
 
 

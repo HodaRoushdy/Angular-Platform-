@@ -1,11 +1,11 @@
-import { Component, ComponentFactory } from '@angular/core';
-import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { Directive, EventEmitter, Input, Output, QueryList, ViewChildren } from '@angular/core';
-import { DecimalPipe, NgFor, NgIf } from '@angular/common';
-import { EmailValidator } from '@angular/forms';
+import { CommonModule, NgIf } from '@angular/common';
+import { Component } from '@angular/core';
+import {
+  NgbPaginationModule,
+  NgbTooltipModule,
+} from '@ng-bootstrap/ng-bootstrap';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SidebarModule } from 'ng-cdbangular';
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 interface PageEvent {
   first: number;
@@ -17,27 +17,58 @@ interface PageEvent {
 @Component({
   selector: 'app-control-of-table',
   templateUrl: './control-of-table.component.html',
-  styleUrls: ['./control-of-table.component.css'] ,
-  standalone:true,
-  imports: [NgIf, SidebarModule , TranslateModule ,NgbTooltipModule ,NgbPaginationModule],
-
+  styleUrls: ['./control-of-table.component.css'],
+  standalone: true,
+  imports: [
+    NgIf,
+    SidebarModule,
+    TranslateModule,
+    NgbTooltipModule,
+    NgbPaginationModule,
+    CommonModule,
+  ],
 })
-
 export class ControlOfTableComponent {
   page = 1;
   first: number = 0;
   rows: number = 10;
   name = 'new presumptive name';
-  constructor(
-    public translate: TranslateService
-  ) {
-    translate.addLangs(['en','ar']);
+  constructor(public translate: TranslateService) {
+    translate.addLangs(['en', 'ar']);
     translate.setDefaultLang('en');
   }
-  // data=[
-  //   {id:1,fullName:'new presumptive name',email:'Example@company.com',workingDays:' 2023-01-01',userInterface:'../../assets/imageflour.png'}
-  // ]
+  data = [
+    {
+      idNumber: 1,
+      fullName: 'new presumptive name 123454sss',
+      email: 'Example@company.com',
+      workingDays: ' 2023-01-01',
+      userInterface: '../../assets/calendar icone.svg',
+    },
+    {
+      idNumber: 2,
+      fullName: 'new presumptive name',
+      email: 'Example@company.com',
+      workingDays: ' ',
+      userInterface: '../../assets/imageflour.png',
+    },
+    {
+      idNumber: 3,
+      fullName: 'new presumptive name',
+      email: 'Example@company.com',
+      workingDays: ' 2023-01-01',
+      userInterface: '../../assets/calendar icone.svg',
+    },
+    {
+      idNumber: 4,
+      fullName: 'new presumptive name',
+      email: 'Example@company.com',
+      workingDays: ' 2023-01-01',
+      userInterface: '../../assets/imageflour.png',
+    },
+  ];
 
+  cols = ['idNumber', 'fullName', 'email', 'workingDays', 'userInterface'];
 
   switchLang(lang: string) {
     this.translate.use(lang);
@@ -45,5 +76,5 @@ export class ControlOfTableComponent {
   onPageChange(event: PageEvent) {
     this.first = event.first;
     this.rows = event.rows;
-}
+  }
 }

@@ -1,10 +1,15 @@
 <div class="h-100 ">
-  <div class="brand pt-3 container-fluid" style="display: block">
-    <img class="px-2" src="../../assets/logo.svg">
-  </div>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="d-flex" style="justify-content: space-between;">
+
+      <div class="brand container-fluid" style="display: block">
+        <img class="px-2" src="../../assets/logo.svg">
+      </div>
+      <div>
+        <button class="navbar-toggler" style="background-color: yellow; border-radius: 20px;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><img src="../../assets/Vector (2).svg"></span>
+        </button>
+      </div>
+    </div>
 
     <div class="section1 pt-5">
       <div style="gap: 10px; display: flex; text-align: center;align-items: center;">
@@ -29,7 +34,7 @@
   </div>
 
   <div ngbDropdown class="d-inline-block py-3 ">
-    <button style="background-image: url(../../assets/Rectangle\ 226.svg); background-position:left; background-size: contain; background-repeat: no-repeat;" type="button" class="btn" id="dropdownBasic1" ngbDropdownToggle>
+    <button style="background-image: url('../../assets/Rectangle\ 226.svg'); background-position:check; background-size: contain; background-repeat: no-repeat;" type="button" class="btn" id="dropdownBasic1" ngbDropdownToggle>
       <img class="px-2" src="../../assets/home.svg">
     {{'firstMenu' | translate}}
     </button>
@@ -71,7 +76,7 @@
         <span >{{'account'| translate}}</span>
       </div>
       <div style="align-content: center;">
-        <div class="d-flex px-2">
+        <div class="d-flex p-2 ">
           <img src="../../assets/info-circle.svg" class="pe-2">
           <div class="forA"><a href="#">{{'help'| translate}}</a></div>
         </div>
@@ -83,3 +88,4 @@
   </div>
 
 </div>
+
