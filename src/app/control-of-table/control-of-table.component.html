@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<!-- <div class="table-responsive">
 <table class="table table-hover">
   <thead>
     <tr>
@@ -64,4 +64,69 @@
 	[maxSize]="5"
 	[rotate]="true"
 	[boundaryLinks]="true"
-></ngb-pagination>
+></ngb-pagination> -->
+
+
+<div class="table-responsive px-1 pb-5" style="position: relative;">
+  <table class="table table-hover">
+    <thead >
+      <tr >
+        <th *ngFor="let col of cols; let i = index" cdkDrag scope="col" ><div *ngIf="col.selected">
+          {{col.name | translate}}
+        </div></th>
+        <th scope="col" style="text-align: end; cursor: pointer;" (click)="viewDragDrop()" ><img src="../../assets/setting-2 (1).svg" style="width:30px">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of data; let i = index" scope="col">
+        <td scope="row" style="width: 70px;">{{row.idNumber}}</td>
+        <td style="white-space: nowrap;">
+          <ng-template #tipContent>{{row.fullName}}</ng-template>
+          <span [ngbTooltip]="tipContent">{{row.fullName.length > 20 ? row.fullName.slice(0,20) +'...' : row.fullName}}</span>
+        </td>
+        <td>{{row.email}}</td>
+
+        <td> <div class="d-flex" style="gap: 4px; color: white;">
+          <div style="display: inline-block;border-radius: 5px;" *ngFor="let day of row.days;" >
+            <div (click)="workingHoursSelect(day,row)" style="width: 25px;height: 25px; justify-content: center;text-align: center;border-radius: 8px; cursor: pointer;">
+              <p [style.background-color]="getColor(day.selected)" style="border-radius: 6px;" >{{day.name | translate}}</p>
+            </div>
+        </div>
+
+        </div></td>
+
+        <td><div style="display: flex;justify-content: space-between;">
+          <img class="img-fluid" src={{row.userInterface}}>
+        </div>
+        <td>
+          <a href="#"><img  src="../../assets/dots.svg"></a>
+        </td>
+      </tr>
+
+    </tbody>
+
+      <div style="background-color: white; position: absolute; top:20px; left:45px; padding:16px;border: 1px #0771DE solid; border-radius: 10px;"  *ngIf="viewColList">
+      {{'control.grid'|translate}}
+      <div cdkDropList (cdkDropListDropped)="drop($event)">
+      <div cdkDrag *ngFor="let col of cols" >
+        <div class=" d-flex" style="justify-content: space-between; gap:10px;border-bottom: 1px grey solid;">
+          {{col.name | translate}}
+            <div style="border-radius: 5px;">
+              <input type="text" class="form-check-input" type="checkbox" [checked]="col.selected" (change)="layoutChange(col)"
+                id="flexCheckIndeterminate" value="">
+            </div>
+          </div>
+      </div>
+  </div>
+
+      </div>
+  </table>
+
+  <ngb-pagination class="d-flex" style="justify-content: left;"
+    [collectionSize]="120"
+    [(page)]="page"
+    [maxSize]="5"
+    [rotate]="true"
+    [boundaryLinks]="true"
+  ></ngb-pagination>
